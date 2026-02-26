@@ -22,3 +22,22 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+
+# Ignore Kotlin plugin data
+.kotlin
+
+# Ignore InteliJ metadata
+.idea
+*.iml
+
+# Ignore InteliJ build folder
+out/
+
+#ignore api key in resources
+**/resources/*key.txt
