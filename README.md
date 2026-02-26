@@ -1,2 +1,2 @@
-# leirt-msd-2026-template
-Template for practical 2026 grades
+# 2026-trabs-template
+Template para os trabalhos práticos 2026
