@@ -1,7 +1,6 @@
 package pt.isel.mpd.utils.queries;
 
 import pt.isel.mpd.utils.queries.iterators.FilterIterator;
-import pt.isel.mpd.utils.queries.iterators.IteratorCached;
 import pt.isel.mpd.utils.queries.iterators.MapIterator;
 
 import java.util.*;
