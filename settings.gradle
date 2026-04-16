@@ -12,3 +12,4 @@ plugins {
 
 rootProject.name = '2526-trabs-template'
 include 'trab1'
+include 'trab2'
