@@ -138,8 +138,8 @@ public class QueryTests {
 
     @Test
     public void testCache2() {
-
-        Iterable<Integer> nrs = limit(iterate(1, n -> n +1), 10);
+        Random r = new Random();
+        var nrs = generate(() -> r.nextInt(100));
         nrs = cache(nrs);
 
         var itA = nrs.iterator();
