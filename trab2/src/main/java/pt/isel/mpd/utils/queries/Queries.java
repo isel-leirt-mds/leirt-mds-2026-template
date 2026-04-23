@@ -1,6 +1,7 @@
 package pt.isel.mpd.utils.queries;
 
 import pt.isel.mpd.utils.queries.iterators.FilterIterator;
+import pt.isel.mpd.utils.queries.iterators.FlatMapIterator;
 import pt.isel.mpd.utils.queries.iterators.MapIterator;
 
 import java.util.*;
@@ -73,6 +74,7 @@ public class Queries {
      * @return
      * @param <T>
      */
+    @SuppressWarnings("unchecked")
     public static <T> Iterable<T> of(T... values) {
         // to implement
         return null;
@@ -102,6 +104,19 @@ public class Queries {
     public static <T,U>
     Iterable<U> map(Iterable<T> src, Function<T, U> mapper) {
         return () -> new MapIterator<>(src, mapper);
+    }
+
+    /**
+     * a ´lazy´flatMap operation
+     * @param src
+     * @param mapper
+     * @return
+     * @param <T>
+     * @param <U>
+     */
+    public static <T,U>
+    Iterable<U> flatMap(Iterable<T> src, Function<T, Iterable<U>> mapper) {
+        return () -> new FlatMapIterator<>(src, mapper);
     }
 
     /**

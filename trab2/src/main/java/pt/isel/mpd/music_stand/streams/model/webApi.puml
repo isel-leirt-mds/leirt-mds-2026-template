@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+
+
+class LastfmWebApi {
+    +LastFmWebApi(Request request)
+    +searchArtist(String name, int page) : List<ArtistDto>
+    +getArtistDetail(String artistMbid): ArtistDetailDto
+    +getAlbums(String artistMbid, int page): List<AlbumDto>
+    +getAlbumTracks(String albumMbid) : List<TrackDto>
+}
+
+interface Request {
+    +get(String path): Reader
+}
+ 
+LastfmWebApi "1" o- "1" Request
+@enduml
