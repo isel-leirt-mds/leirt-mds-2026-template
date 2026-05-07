@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 import static pt.isel.mpd.utils.resources.BuildUtils.TODO;
 import static pt.isel.mpd.utils.resources.BuildUtils.TO_COMPLETE;
 
-public class CountryTop implements Iterable<TopTrack> {
+public class CountryTop {
     private final String countryName;
 
     public CountryTop(String countryName ) {
@@ -15,11 +15,7 @@ public class CountryTop implements Iterable<TopTrack> {
         TO_COMPLETE("top tracks missed");
     }
 
-    @Override
-    public Iterator<TopTrack> iterator() {
-        TODO("iterator");
-        return null;
-    }
+
 
     public String getCountryName() {
         return countryName;
